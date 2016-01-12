@@ -1,0 +1,24 @@
+{
+  "name": "interestrateapp",
+  "version": "1.0.0",
+  "description": "Interest Rate Project",
+  "main": "script.js",
+  "dependencies": {
+    "jasmine-node-karma": "^1.6.1"
+  },
+  "devDependencies": {
+    "angular": "^1.4.8",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://hub.jazz.net/git/simonmoore/Interest.Rate.App"
+  },
+  "author": "",
+  "license": "ISC"
+}

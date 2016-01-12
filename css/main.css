@@ -1,0 +1,153 @@
+html {
+    background-color: #f0f8ff;
+}
+
+body {
+    margin: 80px auto 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #545454;
+    text-align:center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    font-weight:normal;
+    text-transform:uppercase;
+    line-height: 1.3em;
+}
+
+h1 {
+    font-size: 1.65em;
+}
+
+h2 {
+    font-size: 1.15em;
+}
+
+a {
+    display:block;
+    margin-bottom:20px;
+    color:#222;
+    text-decoration:underline;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+samp {
+    display: none;
+}
+
+.container {
+    max-width:600px;
+    width:100%;
+    margin:0 auto;
+    padding:30px;
+    text-align:center;
+    background:#fff;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding:30px 0;
+    }
+
+    form {
+        padding:15px 0;
+    }
+}
+
+.container h2 {
+    margin-top:40px;
+}
+
+.total {
+    margin:20px auto;
+    padding:5px 15px;
+    display:inline-block;
+    background:#088da5;
+    color:#fff;
+    text-align:center;
+}
+
+form {
+    max-width:350px;
+    margin:30px auto;
+    background:#f0f8ff;
+    padding:15px;
+}
+
+label {
+    display:inline-block;
+    margin-bottom:10px;
+    width:100%;
+}
+
+input[type="number"] {
+    height:30px;
+    padding:0 8px;
+    max-width:300px;
+    border:solid 1px #666;
+    font-size:1em;
+    -moz-appearance:textfield;
+    margin-bottom:10px;
+    box-sizing: border-box;
+    display:inline-block;
+}
+
+input[type='submit'] {
+    height:30px;
+    padding:0 8px;
+    margin:0;
+    background:#088da5;
+    color:#fff;
+    text-transform:uppercase;
+    border:none;
+    cursor:pointer;
+    box-sizing: border-box;
+    display:inline-block;
+    vertical-align: top;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.error {
+    padding:5px 10px;
+    background:#b71c1c;
+    text-transform: uppercase;
+    color:#fff;
+    font-size:0.75em;
+}
+
+.error:before {
+    content:"X";
+    margin-right:5px;
+    font-weight:bold;
+    font-size:1.1em;
+
+}
+
+@-webkit-keyframes colorize {
+    0% {
+        -webkit-filter: grayscale(100%);
+    }
+    100% {
+        -webkit-filter: grayscale(0%);
+    }
+}
+
+@keyframes colorize {
+    0% {
+        filter: grayscale(100%);
+    }
+    100% {
+        filter: grayscale(0%);
+    }
+}
