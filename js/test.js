@@ -1,14 +1,14 @@
 
 describe("Testing Investment App", function() {
 
-      beforeEach(module('interestApp'));
+    beforeEach(module('interestApp'));
 
-      var $controller;
+    var $controller;
 
-      beforeEach(inject(function(_$controller_){
+    beforeEach(inject(function(_$controller_){
         // The injector unwraps the underscores (_) from around the parameter names when matching
         $controller = _$controller_;
-      }));
+    }));
     
     describe('$scope.balance', function() {
         it('Test investment balance between 0 and 1000 produces the correct value with the set interest rate of 1%', function() {
