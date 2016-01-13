@@ -1,5 +1,5 @@
 
-describe("Balance", function() {
+describe("Testing Investment App", function() {
 
       beforeEach(module('interestApp'));
 
