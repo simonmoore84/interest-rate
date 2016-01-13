@@ -83,7 +83,7 @@ samp {
 
 form {
     max-width:350px;
-    margin:30px auto;
+    margin:10px auto 30px;
     background:#f0f8ff;
     padding:15px;
 }
@@ -124,6 +124,10 @@ input[type='submit'] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+}
+
+.alert{
+    height:50px;
 }
 
 .error {

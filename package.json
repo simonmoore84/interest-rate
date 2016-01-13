@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "angular": "^1.4.8",
+    "angular-mocks": "^1.4.8",
     "karma": "^0.13.19",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.6"

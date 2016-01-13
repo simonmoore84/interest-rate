@@ -23,8 +23,10 @@
         <section class="container" ng-controller="InterestCalculatorController as interestCtrl">
 
             <p>Enter below the amount you would like to invest.</p>
-
-            <span class="error" ng-hide="errorHidden">Please enter a valid integer</span>
+            
+            <div class="alert">
+                <span class="error" ng-hide="errorHidden">Please enter a valid integer</span>
+            </div>
 
             <form>
                 <label for="balance">Your Investment Value</label>

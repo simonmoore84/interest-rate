@@ -28,14 +28,23 @@ angular.module('interestApp', [])
             $scope.newHidden = false,
             $scope.balance/100 * 3 + $scope.balance;
 
-        else if ($scope.balance <= 0 )
+        else if ($scope.balance == 0 )
             return $scope.errorHidden = false,
             $scope.newHidden = true,
+            $scope.totalHidden = true;
+        
+        else if ($scope.balance < 0 )
+            return $scope.errorHidden = false,
+            $scope.newHidden = true,
+            $scope.totalHidden = true;
+        
+        else if ($scope.balance == null )
             $scope.totalHidden = true;
 
         else
             return $scope.errorHidden = true,
             $scope.newHidden = true;
+            $scope.totalHidden = true;
 
     }
 
@@ -64,8 +73,19 @@ angular.module('interestApp', [])
     // Show total once values have been entered
 
     $scope.filterValue = function($event){
-        $scope.totalHidden = false;
+        if ($scope.balance == '')
+            return $scope.totalHidden = true;
+        else {
+            $scope.totalHidden = false;
+        }
+            
         $scope.varHidden = false;
+        
+        if(isNaN(String.fromCharCode($event.keyCode))){
+            $event.preventDefault();
+            
+            $scope.totalHidden = true;
+        }
     };
 
 }])
