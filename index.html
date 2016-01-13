@@ -6,18 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Investment Calculation App</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
+        
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/jasmine.css">
 
         <script src="js/angular-min.js"></script>
-
-        <script src="js/test.js"></script>
-
         <script src="js/script.js"></script>
+        
     </head>
     <body>
-
-        <h1>Calculate your investment</h1>
+        
+        <header>
+            <h1>Calculate your investment</h1>
+        </header>
 
         <section class="container" ng-controller="InterestCalculatorController as interestCtrl">
 
@@ -29,22 +29,25 @@
                 <label for="balance">Your Investment Value</label>
                 <input type="number" id="balance" name="balance" ng-model="balance" ng-required="required" ng-keypress="filterValue($event)" />
             </form>
+            
+            <p ng-hide="totalHidden" class="total">Your current balance with our standard interest is <strong ng-model="total" ng-bind="calculateTotalBalance()"></strong>.</p>
 
             <a href="#" ng-click="moreInterest()" ng-hide="newHidden">Add new variable interest rate?</a>
 
             <div ng-hide="interestHidden">
-                 <h2>Variable interest rate</h2>
-
-                <form >
-                    <label for="balance">Interest Rate(%)</label>
+                
+                <header>
+                    <h2>Variable interest rate</h2>
+                </header>
+                
+                <form>
+                    <label for="interest">Interest Rate(%)</label>
                     <input type="number" id="interest" name="interest" ng-model="interest" ng-keypress="filterValue($event)" />
-                    <input type="submit" ng-click="update()" value="Update" />
                 </form>
 
             </div>
-
-            <p ng-hide="totalHidden" class="total">Your current balance with interest is <strong ng-model="total" ng-bind="calculateTotalBalance()"></strong>.</p>
-
+            
+            <p ng-hide="varHidden" class="total">Your current balance with the new variable rate interest is <strong ng-bind="calculateVariableTotalBalance()"></strong>.</p>
 
         </section>
 
