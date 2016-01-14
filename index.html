@@ -26,7 +26,7 @@
 
             <form>
                 <label for="balance">Your Investment Value</label>
-                <input type="number" id="balance" name="balance" ng-model="balance" ng-required="required" ng-keypress="filterValue($event)" allow-something="true" />
+                <input type="number" id="balance" name="balance" ng-model="balance" ng-required="required"  />
             </form>
             
             <p ng-hide="totalHidden" class="total">Your current balance with our standard interest is <strong ng-model="total" ng-bind="calculateTotalBalance()"></strong>.</p>
@@ -41,7 +41,7 @@
                 
                 <form>
                     <label for="interest">Interest Rate(%)</label>
-                    <input type="number" id="interest" name="interest" ng-model="interest" ng-required="required" ng-keypress="filterValue($event)" />
+                    <input type="number" id="interest" name="interest" ng-model="interest" ng-required="required"  />
                 </form>
                 
                 <p ng-hide="varHidden" class="total">Your current balance with the new variable rate interest is <strong ng-bind="calculateVariableTotalBalance()"></strong>.</p>

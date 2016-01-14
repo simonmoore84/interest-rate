@@ -61,17 +61,6 @@ angular.module('interestApp', [])
         $scope.interestHidden = false;
     }
     
-    // Prevent Negative and string based characters being entered into the number field (Safari issue)
-    
-    $scope.filterValue = function($event){
-        
-        if(isNaN(String.fromCharCode($event.keyCode))){
-            $event.preventDefault();
-            
-            $scope.totalHidden = false;
-            $scope.varHidden = false;
-        }
-    };
 
 }])
 
